@@ -1,10 +1,36 @@
+<!-- Note list container -->
 <div class = "note-list-container">
     <ul id = "note-list-fuction">
-        <li><a href = "#" id = "addNote" >Add Note</a></li>
-        <li><a href = "#" id = "selectNote">Select</a></li>
-        <li><a href = "#" id = "deleteNote" >Delete</a></li>
+        <li><a href = "#" id = "addNote" ><span class="icon-add-outline"></span></a></li>
+        <li><a href = "#" id = "selectNote"><span class="icon-checkmark-outline"></span></a></li>
+        <li><a href = "#" id = "deleteNote" ><span class="icon-trash"></span></a></li>
     </ul>
+    
+    <div class = "search">
+        <input id = "search" name = "search" type = "text" placeholder = "Search" />
+    </div>
+    <div class = "note-list">
+        <ul>
+            <li>Note title</li>
+            <li>Note title</li>
+            <li>Note title</li>
+        </ul>
+    </div>
 </div>
+
+
+<!-- Note Display container -->
 <div class = "note-display-container">
-    <h1>note display</h1>
+    <form>
+        
+        <input type = "text" id = "title" name = "title" placeholder = "Note Title">
+        <ul id = "notepad-fuction">
+            <li><a href = "#" id = "text-bold" ><span class="icon-format-bold"></span></a></li>
+            <li><a href = "#" id = "text-intalic"><span class="icon-format-italic"></span></a></li>
+            <li><a href = "#" id = "text-underline" ><span class="icon-format-underline"></span></a></li>
+        </ul>
+        
+        <textarea id = "notepad" placeholder= "Your Note Here...."></textarea>
+        
+    </form>
 </div>
