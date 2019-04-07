@@ -62,11 +62,11 @@ body:after {
     transition: all 0.4s ease-in-out;
 }
 #note-list-fuction li a:hover {
-    color: #fff;
+    color: #000;
     background-color: yellow;
 }
 #note-list-fuction li a:hover span {
-    color: #fff;
+    color: #000;
     background-color: yellow;
     transition: all 0.4s ease-in-out;
 }
@@ -107,7 +107,7 @@ body:after {
     
 }
 
-#title {
+#notes_title {
     display: block;
     width: 95%;
     margin: 10px auto 10px auto;
@@ -143,22 +143,35 @@ body:after {
     transition: all 0.4s ease-in-out;
 }
 #notepad-fuction li a:hover {
-    color: #fff;
+    color: #000;
     background-color: yellow;
 }
 #notepad-fuction li a:hover span {
-    color: #fff;
+    color: #000;
     background-color: yellow;
     transition: all 0.4s ease-in-out;
 }
 
 
-#notepad {
+#notes_text {
     display: block;
     width: 95%;
-    height: 450px;
+    height: 400px;
     margin: 0px auto 10px auto;
     background: yellow;
     color: #000;
     padding: 10px;
+}
+input[type = submit] {
+    display: block;
+    background-color: yellow;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #000;
+    border: 0px;
+    transition: all 0.8s ease-in-out;
+}
+input[type = submit]:hover {
+    border-radius: 8px;
 }

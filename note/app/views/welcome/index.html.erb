@@ -21,16 +21,16 @@
 
 <!-- Note Display container -->
 <div class = "note-display-container">
-    <form>
+    <%= form_for :notes do |f| %>
         
-        <input type = "text" id = "title" name = "title" placeholder = "Note Title">
+        <%= f.text_field :title, placeholder: "Note Title" %>
         <ul id = "notepad-fuction">
             <li><a href = "#" id = "text-bold" ><span class="icon-format-bold"></span></a></li>
             <li><a href = "#" id = "text-intalic"><span class="icon-format-italic"></span></a></li>
             <li><a href = "#" id = "text-underline" ><span class="icon-format-underline"></span></a></li>
         </ul>
         
-        <textarea id = "notepad" placeholder= "Your Note Here...."></textarea>
+        <%= f.text_area :text, placeholder: "Your note here.... " %>
         
-    </form>
+    <% end %>
 </div>
