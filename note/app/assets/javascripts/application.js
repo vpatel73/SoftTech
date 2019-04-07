@@ -14,3 +14,24 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+			$(document).on('ready', function() {
+                
+				$("#element").introLoader({
+
+                    animation: {
+                        name: 'counterLoader',
+                        options: {
+                            exitFx:'slideDown',
+                            ease: "easeOutSine",
+                            style: 'fluoGreen',
+                            delayBefore: 1000, //delay time in milliseconds
+                            exitTime: 500,
+                            animationTime: 1000,
+                        }
+                    }
+
+                });
+                
+            });
