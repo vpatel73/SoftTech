@@ -1,2 +1,0 @@
-class NoteApp < ApplicationRecord
-end
