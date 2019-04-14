@@ -1,5 +1,3 @@
-
-
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -18,21 +16,22 @@
 //= require_tree .
 
 
-$(document).on('ready', function() {
-	$("#element").introLoader({
-
-        animation: {
-            name: 'counterLoader',
-            options: {
-                exitFx:'slideDown',
-                ease: "easeOutSine",
-                style: 'fluoGreen',
-                delayBefore: 1000, //delay time in milliseconds
-                exitTime: 500,
-                animationTime: 1000,
-            }
-        }
-
-    });
+			$(document).on('ready', function() {
                 
-});
+				$("#element").introLoader({
+
+                    animation: {
+                        name: 'counterLoader',
+                        options: {
+                            exitFx:'slideDown',
+                            ease: "easeOutSine",
+                            style: 'fluoGreen',
+                            delayBefore: 1000, //delay time in milliseconds
+                            exitTime: 500,
+                            animationTime: 1000,
+                        }
+                    }
+
+                });
+                
+            });
