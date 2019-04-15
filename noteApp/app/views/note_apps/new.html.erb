@@ -1,0 +1,40 @@
+<div class = "note-app-container" >
+    <!-- Note list container -->
+    <div class = "note-list-container">
+        <ul id = "note-list-fuction">
+            <li><a href = "#" id = "addNote" ><span class="icon-add-outline"></span></a></li>
+            <li><a href = "#" id = "selectNote"><span class="icon-checkmark-outline"></span></a></li>
+            <li><a href = "#" id = "deleteNote" ><span class="icon-trash"></span></a></li>
+        </ul>
+        
+        <div class = "search">
+            <input id = "search" name = "search" type = "text" placeholder = "Search" />
+        </div>
+        <div class = "note-list">
+            <ul>
+                <li>Note title</li>
+                <li>Note title</li>
+                <li>Note title</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <!-- Note Display container -->
+    <div class = "note-display-container">
+        <%= form_for :notes, url: note_apps_path do |f| %>
+            
+            <%= f.text_field :title, placeholder: "Note Title", :required => true %>
+            <ul id = "notepad-fuction">
+                <li><a href = "#" id = "text-bold" ><span class="icon-format-bold"></span></a></li>
+                <li><a href = "#" id = "text-intalic"><span class="icon-format-italic"></span></a></li>
+                <li><a href = "#" id = "text-underline" ><span class="icon-format-underline"></span></a></li>
+            </ul>
+            
+            <%= f.text_area :text, placeholder: "Your note here.... ", :required => true %>
+            
+            <%= f.submit value: "Create Note" %>
+            
+        <% end %>
+    </div>
+</div>

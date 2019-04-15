@@ -1,0 +1,179 @@
+// Place all the styles related to the NoteApps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$w : 100%;
+a {
+    text-decoration: none;
+}
+.body {
+    margin: 0px;
+    padding: 0px;
+}
+.note-app-container {
+    width: 1200px;
+    height: 100%;
+    background-color: #fff;
+    margin: 10px auto 0px auto;
+    padding: 0px;
+    border: 3px solid #000;
+    border-radius: 2%;
+}
+.clear-both {
+    clear: both;
+}
+.note-list-container {
+    float: left;
+    width: 20%;
+}
+.note-display-container {
+    float: left;
+    width: 80%;
+    border-left: 3px solid #000;
+    min-height: 539px;
+}
+
+.note-app-container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/*Note-list-function css*/
+#note-list-fuction {
+    display: inline-table;
+    list-style: none;
+    width: 100%;
+    padding-left: 0px;
+    border-bottom: 1px solid #000;
+    margin: 0px;
+}
+
+#note-list-fuction li {
+    display: inline-block;
+    width: $w/3;
+    text-align: center;
+}
+
+#note-list-fuction li a {
+    display: inline-block;
+    margin: 10px 0px;
+    padding: 10px 13px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+#note-list-fuction li a:hover {
+    color: #000;
+    background-color: yellow;
+}
+#note-list-fuction li a:hover span {
+    color: #000;
+    background-color: yellow;
+    transition: all 0.4s ease-in-out;
+}
+
+
+/*Icons for list-function */
+.icon-add-outline:before {
+  content: "\e903";
+}
+.icon-checkmark-outline:before {
+  content: "\e904";
+}
+.icon-trash:before {
+  content: "\e905";
+}
+.icon-format-bold:before {
+  content: "\e901";
+}
+.icon-format-italic:before {
+  content: "\e902";
+}
+.icon-format-underline:before {
+  content: "\e900";
+}
+
+.search {
+    border-bottom: 1px solid #000;
+}
+.search input {
+    display: block;
+    padding: 10px;
+    width: 80%;
+    height: 20px;
+    margin: 10px auto;
+    font-size: 12px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    
+}
+
+#notes_title {
+    display: block;
+    width: 95%;
+    margin: 10px auto 10px auto;
+    padding-left: 10px;
+    border: 0px;
+    border-bottom: 2px solid #000;
+    height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/*Notepad-function css*/
+#notepad-fuction {
+    display: inline-table;
+    list-style: none;
+    width: 95%;
+    padding-left: 18px;
+    margin: 0px;
+}
+
+#notepad-fuction li {
+    display: inline-block;
+    margin: 0px 5px;
+    text-align: center;
+}
+
+#notepad-fuction li a {
+    display: inline-block;
+    margin: 10px 0px;
+    padding: 10px 13px;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+#notepad-fuction li a:hover {
+    color: #000;
+    background-color: yellow;
+}
+#notepad-fuction li a:hover span {
+    color: #000;
+    background-color: yellow;
+    transition: all 0.4s ease-in-out;
+}
+
+
+#notes_text {
+    display: block;
+    width: 95%;
+    height: 400px;
+    margin: 0px auto 10px auto;
+    background: yellow;
+    color: #000;
+    padding: 10px;
+}
+input[type = submit] {
+    display: block;
+    background-color: yellow;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #000;
+    border: 0px;
+    transition: all 0.8s ease-in-out;
+}
+input[type = submit]:hover {
+    border-radius: 8px;
+}
