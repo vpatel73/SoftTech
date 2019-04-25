@@ -1,0 +1,46 @@
+<div class = "note-app-container" >
+    <!-- Note list container -->
+    <div class = "note-list-container">
+        <ul id = "note-list-fuction">
+            <li><%= link_to '', new_note_path, class: 'icon-add-outline' -%></li>
+            <li><a href = "#" id = "selectNote"><span class="icon-checkmark-outline"></span></a></li>
+            <li><%= link_to '',  note_path(@note_app), method: :delete, data: { confirm: 'Are you sure?' }, class: "icon-trash" %></li>
+        </ul>
+        
+        <div class = "search">
+            <input id = "search" name = "search" type = "text" placeholder = "Search" />
+        </div>
+        <div class = "note-list">
+            <ul>
+                <% @note_list.reverse_each do |note_app| %>
+                    <li>
+                        <% if (note_app.title == @note_app.title && note_app.text ==  @note_app.text) %>
+                            <%= link_to note_app.title, note_path(note_app), :class=> "active" %>
+                        <% else %>
+                            <%= link_to note_app.title, note_path(note_app) %>
+                        <% end %> 
+                    </li> 
+                <% end %>
+                
+            </ul>
+        </div>
+    </div>
+    
+    
+    <!-- Note Display container -->
+    <div class = "note-show-container">
+        
+        <h3>
+           <%= @note_app.title %>
+        </h3>
+
+        <p>
+            <%= @note_app.text %>
+        </p>
+        
+        
+            <%= link_to 'Edit Note', edit_note_path(@note_app) %>
+            <%= link_to 'Delete Note',  note_path(@note_app), method: :delete, data: { confirm: 'Are you sure?' } %>
+        
+    </div>
+</div>

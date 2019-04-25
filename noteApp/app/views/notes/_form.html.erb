@@ -1,0 +1,14 @@
+<%= form_for :notes, url: notes_path do |f| %>
+            
+    <%= f.text_field :title, placeholder: "Note Title", :required => true %>
+    <ul id = "notepad-fuction">
+        <li><a href = "#" id = "text-bold" ><span class="icon-format-bold"></span></a></li>
+        <li><a href = "#" id = "text-intalic"><span class="icon-format-italic"></span></a></li>
+        <li><a href = "#" id = "text-underline" ><span class="icon-format-underline"></span></a></li>
+    </ul>
+            
+    <%= f.text_area :text, placeholder: "Your note here.... ", :required => true %>
+            
+    <%= f.submit value: "Save Note" %>
+            
+<% end %>
