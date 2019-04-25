@@ -3,7 +3,6 @@
     <div class = "note-list-container">
         <ul id = "note-list-fuction">
             <li><a href = "#" id = "addNote" ><span class="icon-add-outline"></span></a></li>
-            <li><a href = "#" id = "selectNote"><span class="icon-checkmark-outline"></span></a></li>
             <li><a href = "#" id = "deleteNote" ><span class="icon-trash"></span></a></li>
         </ul>
         
@@ -12,9 +11,9 @@
         </div>
         <div class = "note-list">
             <ul>
-                <% @note_list.reverse_each do |note_app| %>
+                <% @notes.reverse_each do |note| %>
                     <li>
-                      <%= link_to note_app.title, note_path(note_app) %>
+                      <%= link_to note.title, note_path(note) %>
                     </li> 
                 <% end %>
                 
