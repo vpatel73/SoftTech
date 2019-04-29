@@ -1,0 +1,6 @@
+
+    <% flash.each do |key, message| %>
+        <div class = "message-<%= key %>" > <%= message %>></div>
+    <% end %>
+
+<h1> <%= current_user.username.capitalize %></h1>

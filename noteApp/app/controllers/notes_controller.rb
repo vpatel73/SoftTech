@@ -1,17 +1,23 @@
 class NotesController < ApplicationController
     def index 
-        @notes = Note.all
+        @user = current_user
+        @user_notes = Note.all
     end
     def new
-        @notes = Note.all
-        @note = Note.new
+        @user = current_user
+        @user_notes = Note.all
+        @user_note = Note.new
     end
     
     def create 
-        @note = Note.new(note_params)
+        @user = current_user
         
-        if @note.save
-            redirect_to notes_path
+        @user_note = Note.new(note_params)
+        
+        @user_note = @user.notes.new(note_params)
+        
+        if @user_note.save
+            redirect_to user_notes_path(@user_note)
         else 
             render 'new'
         end
@@ -19,18 +25,21 @@ class NotesController < ApplicationController
     end
     
     def show 
-       @notes = Note.all
-       @note = Note.find(params[:id]) 
+        @user = current_user
+        @user_notes = Note.all
+        @user_note = Note.find(params[:id]) 
     end
     
     def edit 
-        @notes = Note.all
-        @note = Note.find(params[:id])
+        @user = current_user
+        @user_notes = Note.all
+        @user_note = Note.find(params[:id])
     end
     
     def update 
-        @note = Note.find(params[:id])
-        if @note.update(note_params)
+        @user = current_user
+        @user_note = Note.find(params[:id])
+        if @user_note.update(note_params)
             redirect_to notes_path
         else
             render 'edit'
@@ -38,10 +47,11 @@ class NotesController < ApplicationController
     end
     
     def destroy
-        @note = Note.find(params[:id])
-        @note.destroy
+        @user_notes = Note.all
+        @user_note = Note.find(params[:id])
+        @user_note.destroy
         
-        redirect_to notes_path
+        redirect_to user_notes_path
     end
     
 end
