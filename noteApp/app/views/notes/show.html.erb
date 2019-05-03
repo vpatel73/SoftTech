@@ -13,9 +13,9 @@
             <%= @user_note.text %>
         </p>
         
-        
+        <div class = "edit-delete-container">
             <%= link_to 'Edit Note', edit_user_note_path(@user.id, @user_note) %>
             <%= link_to 'Delete Note',  user_note_path(@user.id, @user_note), method: :delete, data: { confirm: 'Are you sure?' } %>
-        
+        </div>
     </div>
 </div>

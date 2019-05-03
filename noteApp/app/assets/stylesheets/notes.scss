@@ -230,3 +230,19 @@ input[type = submit]:hover {
     padding: 10px;
     overflow-y: scroll;
 }
+.edit-delete-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.edit-delete-container a {
+     color: #fff;
+     background-color: #00f;
+     padding: 10px;
+     margin: 0px 10px;
+     transition: all 0.4s ease-in-out;
+ }
+.edit-delete-container a:hover {
+     background-color: yellow;
+     color: #000;
+ }

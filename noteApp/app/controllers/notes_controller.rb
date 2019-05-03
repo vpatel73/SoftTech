@@ -40,7 +40,7 @@ class NotesController < ApplicationController
         @user = current_user
         @user_note = Note.find(params[:id])
         if @user_note.update(note_params)
-            redirect_to notes_path
+            redirect_to user_notes_path
         else
             render 'edit'
         end

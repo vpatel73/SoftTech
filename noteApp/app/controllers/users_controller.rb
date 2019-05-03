@@ -12,6 +12,12 @@ class UsersController < ApplicationController
             flash[:success] = "Sign Up successfully"
             redirect_to user_notes_path(@user)
         else
+            if (@user.password != @user.password_confirmation)
+                flash[:error] = "Password Does not match"
+            else 
+                flash[:error] = "Fill the missing fields"
+                
+            end
             render 'new'
         end
         
@@ -22,6 +28,7 @@ class UsersController < ApplicationController
         redirect_to user_notes_path(@user)
         
     end
+    
 end
 private 
  def user_params

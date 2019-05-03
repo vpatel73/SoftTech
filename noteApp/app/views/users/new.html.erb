@@ -1,24 +1,34 @@
 <h1 class = "text-center"> Sign Up </h1>
-    <%= form_for(@user) do |f| %>
-        <%= f.label :username %>
-        <%= f.text_field :username %>
-        
-        <%= f.label :email %>
-        <%= f.email_field :email %>
-        
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-        
-        <%= f.label :password_confirmation, "Confirmation" %>
-       <%= f.password_field :password_confirmation %>
-       
-       <%= f.submit "Create an account" %>
-    <% end %>
-    
-    <%= link_to 'Already have an account', 'login' %>
     
     <% flash.each do |key, message| %>
-        <div class = "message-<%= key %>" > <%= message %>></div>
+        <div> <%= message %></div>
     <% end %>
+    
+    <%= form_for(@user) do |f| %>
+        <div class = "form-group">
+            <%= f.text_field :username, placeholder: "username" %>
+        </div>
+        
+        <div class = "form-group">
+            <%= f.email_field :email, placeholder: "email" %>
+        </div>
+        
+        <div class = "form-group">
+            <%= f.password_field :password, placeholder: "password" %>
+        </div>
+        
+        <div class = "form-group">
+            <%= f.password_field :password_confirmation, placeholder: "confirm password" %>
+        </div>
+       
+        <div class = "form-group">
+           <%= f.submit "Create an account" %>
+        </div>
+        
+        
+        <%= link_to 'Already have an account', 'login' %>
+    <% end %>
+    
+    
     
     <%= yield %>

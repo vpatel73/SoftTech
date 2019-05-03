@@ -12,4 +12,45 @@
  *
  *= require_tree .
  *= require_self
+ *= @import ‘bootstrap’; 
  */
+ 
+ body {
+    margin: 0px;
+    padding: 0px;
+ }
+ header {
+     background: #fff;
+     padding: 10px;
+ }
+ header .header-container {
+     width: 1200px;
+     margin: 0px auto;
+ }
+ header .logo {
+     float: left;
+ }
+ header .logo img {
+     width: 80px;
+     margin-left: 65px;
+ }
+ header .user-name {
+     float: right;
+     margin-top: 24px;
+ }
+ header .user-name a {
+     color: #fff;
+     background-color: #00f;
+     padding: 10px;
+     margin: 0px 10px;
+     transition: all 0.4s ease-in-out;
+ }
+ header .user-name a:hover {
+     background-color: yellow;
+     color: #000;
+ }
+ header:after {
+     content: "";
+     display: block;
+     clear: both;
+ }
